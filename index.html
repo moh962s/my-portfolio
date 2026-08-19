@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد حسنين | مطور تطبيقات </title>
+
+    <!-- الخطوط والأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ربط ملف التنسيق (CSS) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="logo">MH.</a>
+            <div class="nav-controls">
+                <ul class="nav-links">
+                    <li><a href="#projects">المشاريع</a></li>
+                    <li><a href="#contact">تواصل</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <img src="assets/profile.jpg" alt="Mohammad Hasanain" class="profile-img">
+            </div>
+            <h1 class="hero-title">محمد حسنين</h1>
+            <p class="hero-subtitle">مطور تطبيقات موبايل | متدرب في Flutter و AI</p>
+            <div class="hero-buttons">
+                <a href="assets/resume.pdf" download class="btn btn-primary">
+                    <i class="fas fa-download"></i> تحميل السيرة الذاتية
+                </a>
+                <a href="#projects" class="btn btn-outline">
+                    <i class="fas fa-chevron-down"></i> تصفح أعمالي
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>أحدث مشاريعي</h2>
+                <p>ما رأيك بأخذ نظرة على بعض مشاريعي؟</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- مشروع 1: Game Scope -->
+                <div class="project-card reveal">
+                    <div class="project-gallery">
+                        <div class="main-image-wrapper" onclick="openLightbox(this.querySelector('img').src)">
+                            <img id="main-img-1" src="assets/game-scope/1.jpg" alt="Game Scope Main">
+                        </div>
+                        <div class="thumbnails" id="thumbnails-1">
+                            <img src="assets/game-scope/1.jpg" class="thumbnail-img active" onclick="changeImage(1, 0)">
+                            <img src="assets/game-scope/2.jpg" class="thumbnail-img" onclick="changeImage(1, 1)">
+                            <img src="assets/game-scope/3.jpg" class="thumbnail-img" onclick="changeImage(1, 2)">
+                            <img src="assets/game-scope/4.jpg" class="thumbnail-img" onclick="changeImage(1, 3)">
+                            <img src="assets/game-scope/5.jpg" class="thumbnail-img" onclick="changeImage(1, 4)">
+                            <img src="assets/game-scope/6.jpg" class="thumbnail-img" onclick="changeImage(1, 5)">
+                            <img src="assets/game-scope/7.jpg" class="thumbnail-img" onclick="changeImage(1, 6)">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Game Scope</h3>
+                        <p>تطبيق يجمع عروض الألعاب المجانية من Steam و Epic Games باستخدام Flutter و REST APIs.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-sm">عرض مباشر</a>
+                            <a href="#" class="btn-sm outline">الكود المصدري</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 2: Finance Pro -->
+                <div class="project-card reveal">
+                    <div class="project-gallery">
+                        <div class="main-image-wrapper" onclick="openLightbox(this.querySelector('img').src)">
+                            <img id="main-img-2" src="assets/finance-pro/1.jpg" alt="Finance Pro Main">
+                        </div>
+                        <div class="thumbnails" id="thumbnails-2">
+                            <img src="assets/finance-pro/1.jpg" class="thumbnail-img active"
+                                onclick="changeImage(2, 0)">
+                            <img src="assets/finance-pro/2.jpg" class="thumbnail-img" onclick="changeImage(2, 1)">
+                            <img src="assets/finance-pro/3.jpg" class="thumbnail-img" onclick="changeImage(2, 2)">
+                            <img src="assets/finance-pro/4.jpg" class="thumbnail-img" onclick="changeImage(2, 3)">
+                            <img src="assets/finance-pro/5.jpg" class="thumbnail-img" onclick="changeImage(2, 4)">
+                            <img src="assets/finance-pro/6.jpg" class="thumbnail-img" onclick="changeImage(2, 5)">
+                            <img src="assets/finance-pro/7.jpg" class="thumbnail-img" onclick="changeImage(2, 6)">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Finance Pro</h3>
+                        <p>تطبيق مالي مع مساعد صوتي ذكي (AI) لإدارة الاشتراكات والمصروفات مع واجهة أنيقة ومريحة للعين.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="btn-sm">عرض مباشر</a>
+                            <a href="#" class="btn-sm outline">الكود المصدري</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 3: Campus Event System -->
+                <div class="project-card reveal">
+                    <div class="project-gallery">
+                        <div class="main-image-wrapper" onclick="openLightbox(this.querySelector('img').src)">
+                            <img id="main-img-3" src="assets/campus-system/1.jpg" alt="Campus System Main">
+                        </div>
+                        <div class="thumbnails" id="thumbnails-3">
+                            <img src="assets/campus-system/1.jpg" class="thumbnail-img active"
+                                onclick="changeImage(3, 0)">
+                            <img src="assets/campus-system/2.jpg" class="thumbnail-img" onclick="changeImage(3, 1)">
+                            <img src="assets/campus-system/3.jpg" class="thumbnail-img" onclick="changeImage(3, 2)">
+                            <img src="assets/campus-system/4.jpg" class="thumbnail-img" onclick="changeImage(3, 3)">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Campus Event System</h3>
+                        <p>نظام إدارة فعاليات وترتيب الفرق والأفراد، مبني بأدوات ويب (Python) مع لوحة تحكم وإحصائيات
+                            دقيقة.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-sm">عرض مباشر</a>
+                            <a href="#" class="btn-sm outline">الكود المصدري</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="reveal">تواصل معي</h2>
+            <p class="reveal">هل لديك فكرة مشروع؟ دعنا نصنع شيئاً مميزاً معاً.</p>
+            <div class="social-links reveal">
+                <a href="https://www.linkedin.com/in/hammoda-0b73293a2" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:mh1061323@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p> محمد حسنين</p>
+    </footer>
+
+    <!-- عارض الصور المكبرة (Lightbox) -->
+    <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <!-- ربط ملف الحركات (JavaScript) -->
+    <script defer src="script.js"></script>
+</body>
+
+</html>
